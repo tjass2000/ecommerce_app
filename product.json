@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "product_name": "Wireless Bluetooth Earbuds",
+      "category": "Electronics",
+      "price": 49.99,
+      "description": "High-quality wireless earbuds with noise-canceling technology for an immersive audio experience."
+    },
+    {
+      "product_name": "Men's Leather Wallet",
+      "category": "Fashion",
+      "price": 29.99,
+      "description": "Genuine leather wallet with multiple card slots and a stylish design."
+    },
+    {
+      "product_name": "55-inch 4K Smart TV",
+      "category": "Electronics",
+      "price": 549.99,
+      "description": "A smart TV with 4K resolution, built-in streaming apps, and voice control."
+    },
+    {
+      "product_name": "Women's Running Shoes",
+      "category": "Sports & Outdoors",
+      "price": 79.99,
+      "description": "Lightweight and breathable running shoes designed for maximum comfort during workouts."
+    },
+    {
+      "product_name": "Stainless Steel Water Bottle",
+      "category": "Home & Kitchen",
+      "price": 19.99,
+      "description": "Double-walled, vacuum-insulated water bottle to keep your drinks hot or cold for hours."
+    },
+    {
+      "product_name": "Digital Camera",
+      "category": "Electronics",
+      "price": 349.99,
+      "description": "Compact digital camera with high-resolution sensor and various shooting modes."
+    },
+    {
+      "product_name": "Hardcover Fantasy Novel",
+      "category": "Books",
+      "price": 14.99,
+      "description": "A captivating fantasy novel that takes you on an epic adventure in a magical world."
+    },
+    {
+      "product_name": "Men's Classic Dress Shirt",
+      "category": "Fashion",
+      "price": 34.99,
+      "description": "A timeless dress shirt with a comfortable fit, suitable for formal occasions."
+    },
+    {
+      "product_name": "Espresso Coffee Maker",
+      "category": "Home & Kitchen",
+      "price": 149.99,
+      "description": "A sleek and efficient espresso machine for brewing cafe-quality coffee at home."
+    },
+    {
+      "product_name": "Portable Bluetooth Speaker",
+      "category": "Electronics",
+      "price": 59.99,
+      "description": "Compact and powerful Bluetooth speaker with long battery life, perfect for on-the-go music."
+    }
+  ]
+}
