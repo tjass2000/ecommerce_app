@@ -1,20 +1,20 @@
 const express = require("express");
 const router = express.Router();
-const userAuthController = require("../controllers/userAuthController");
+const userController = require("../controllers/userController");
 const productController = require("../controllers/productController");
 
 //Admin Route for getting all users
 router
   .route("/userDetails")
-  .get(userAuthController.getUsers)
-  .post(userAuthController.createUser);
+  .get(userController.getUsers)
+  .post(userController.createUser);
 
 //Admin Route to get specific user based on id
 router
   .route("/userDetails/:id")
-  .get(userAuthController.getUser)
-  .delete(userAuthController.deleteUser)
-  .put(userAuthController.updateUser);
+  .get(userController.getUser)
+  .delete(userController.deleteUser)
+  .put(userController.updateUser);
 
 //Admin Route to get all products
 router

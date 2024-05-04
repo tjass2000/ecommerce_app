@@ -1,0 +1,39 @@
+extends base.pug
+
+block content
+  main
+    //
+      - BANNER
+    .banner
+      .container
+        .slider-container.has-scrollbar
+          .slider-item
+            img.banner-img(src='./assets/images/banner-1.jpg' alt="women's latest fashion sale")
+            .banner-content
+              p.banner-subtitle Trending item
+              h2.banner-title Women&apos;s latest fashion sale
+              p.banner-text
+                | starting at &amp;dollar; 
+                b 20
+                | .00
+              a.banner-btn(href='#') Shop now
+          .slider-item
+            img.banner-img(src='./assets/images/banner-2.jpg' alt='modern sunglasses')
+            .banner-content
+              p.banner-subtitle Trending accessories
+              h2.banner-title Modern sunglasses
+              p.banner-text
+                | starting at &amp;dollar; 
+                b 15
+                | .00
+              a.banner-btn(href='#') Shop now
+          .slider-item
+            img.banner-img(src='./assets/images/banner-3.jpg' alt='new fashion summer sale')
+            .banner-content
+              p.banner-subtitle Sale Offer
+              h2.banner-title New fashion summer sale
+              p.banner-text
+                | starting at &amp;dollar; 
+                b 29
+                | .99
+              a.banner-btn(href='#') Shop now

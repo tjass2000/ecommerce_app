@@ -1,98 +1,114 @@
 const productModel = require("../models/productModel");
 const userAuthModel = require("../models/userAuthModel");
-const APIFeatures = require("../utils/APIFeatures");
 const catchAsync = require("../utils/catchAsync");
 const jwt = require("jsonwebtoken");
 const AppError = require("../utils/appError");
 
+const factory = require("../controllers/handlerFactory");
+
 /////Admin Controls//////////
 //Control to Get All Products
-exports.getAllProducts = catchAsync(async (req, res, next) => {
-  const productRouteFeatures = new APIFeatures(productModel.find(), req.query)
-    .filter()
-    .sort()
-    .limitFields()
-    .paginate();
-  // const queryObj = { ...req.query };
-  // const queryStr = JSON.stringify(queryObj);
-  // let result = await productModel.find(JSON.parse(queryStr));
-  let result = await productRouteFeatures.query;
+//Using Factory Handler Method
+exports.getAllProducts = factory.getAll(productModel);
 
-  if (!result) {
-    return next(new AppError("No product found with that ID", 404));
-  }
+// exports.getAllProducts = catchAsync(async (req, res, next) => {
+//   const productRouteFeatures = new APIFeatures(productModel.find(), req.query)
+//     .filter()
+//     .sort()
+//     .limitFields()
+//     .paginate();
+//   // const queryObj = { ...req.query };
+//   // const queryStr = JSON.stringify(queryObj);
+//   // let result = await productModel.find(JSON.parse(queryStr));
+//   let result = await productRouteFeatures.query;
 
-  res.status(200).json({ status: "success", data: { result } });
-  // try {
-  // } catch (err) {
-  //   res.status(400).json({ status: "failed", data: { err } });
-  // }
-});
+//   if (!result) {
+//     return next(new AppError("No product found with that ID", 404));
+//   }
+
+//   res.status(200).json({ status: "success", data: { result } });
+//   // try {
+//   // } catch (err) {
+//   //   res.status(400).json({ status: "failed", data: { err } });
+//   // }
+// });
 
 //Control to Get Product based on id
-exports.getProduct = catchAsync(async (req, res, next) => {
-  const id = req.params.id;
-  let result = await productModel.findById(id);
+//Using Factory Handler Method
+exports.getProduct = factory.getOne(productModel, { path: "reviews" });
 
-  if (!result) {
-    return next(new AppError("No product found with that ID", 404));
-  }
+// exports.getProduct = catchAsync(async (req, res, next) => {
+//   const id = req.params.id;
+//   let result = await productModel.findById(id).populate("reviews");
 
-  res.status(200).json({ status: "success", data: { result } });
-  //   try {
-  // } catch (err) {
-  //     res.status(400).json({ status: "failed", data: { err } });
-  //   }
-});
+//   if (!result) {
+//     return next(new AppError("No product found with that ID", 404));
+//   }
+
+//   res.status(200).json({ status: "success", data: { result } });
+//   //   try {
+//   // } catch (err) {
+//   //     res.status(400).json({ status: "failed", data: { err } });
+//   //   }
+// });
 
 //Control to create new product
-exports.createProduct = catchAsync(async (req, res, next) => {
-  const payload = req.body;
-  let result = await productModel.create(payload);
+//Using Factory Handler
+exports.createProduct = factory.createOne(productModel);
 
-  if (!result) {
-    return next(new AppError("No product found with that ID", 404));
-  }
+// exports.createProduct = catchAsync(async (req, res, next) => {
+//   const payload = req.body;
+//   let result = await productModel.create(payload);
 
-  res.status(200).json({ status: "success", data: { result } });
-  // try {
-  // } catch (err) {
-  //   res.status(400).json({ status: "failed", data: { err } });
-  // }
-});
+//   if (!result) {
+//     return next(new AppError("No product found with that ID", 404));
+//   }
+
+//   res.status(200).json({ status: "success", data: { result } });
+//   // try {
+//   // } catch (err) {
+//   //   res.status(400).json({ status: "failed", data: { err } });
+//   // }
+// });
 
 //Control to update existing product
-exports.updateProduct = catchAsync(async (req, res, next) => {
-  const id = req.params.id;
-  const payload = req.body;
-  let result = await productModel.findByIdAndUpdate(id, payload);
+//Using Factory Handler
+exports.updateProduct = factory.updateOne(productModel);
 
-  if (!result) {
-    return next(new AppError("No product found with that ID", 404));
-  }
+// exports.updateProduct = catchAsync(async (req, res, next) => {
+//   const id = req.params.id;
+//   const payload = req.body;
+//   let result = await productModel.findByIdAndUpdate(id, payload);
 
-  res.status(200).json({ status: "success", data: { result } });
-  // try {
-  // } catch (err) {
-  //   res.status(400).json({ status: "failed", data: { err } });
-  // }
-});
+//   if (!result) {
+//     return next(new AppError("No product found with that ID", 404));
+//   }
+
+//   res.status(200).json({ status: "success", data: { result } });
+//   // try {
+//   // } catch (err) {
+//   //   res.status(400).json({ status: "failed", data: { err } });
+//   // }
+// });
 
 //Control to delete existing product based on id
-exports.deleteProduct = catchAsync(async (req, res, next) => {
-  const id = req.params.id;
-  let result = await productModel.findByIdAndDelete(id);
+//Using handler factory functions
+exports.deleteProduct = factory.deleteOne(productModel);
 
-  if (!result) {
-    return next(new AppError("No product found with that ID", 404));
-  }
+// exports.deleteProduct = catchAsync(async (req, res, next) => {
+//   const id = req.params.id;
+//   let result = await productModel.findByIdAndDelete(id);
 
-  res.status(200).json({ status: "success", data: { result } });
-  // try {
-  // } catch (err) {
-  //   res.status(400).json({ status: "failed", data: { err } });
-  // }
-});
+//   if (!result) {
+//     return next(new AppError("No product found with that ID", 404));
+//   }
+
+//   res.status(200).json({ status: "success", data: { result } });
+//   // try {
+//   // } catch (err) {
+//   //   res.status(400).json({ status: "failed", data: { err } });
+//   // }
+// });
 /////Admin Controls//////////
 
 //Wishlist Controls

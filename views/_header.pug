@@ -1,0 +1,258 @@
+header
+  .header-main
+    .container
+      a.header-logo(href='#')
+        img(src='./assets/images/logo/logo.svg' alt="Logo" width='120' height='36')
+      .header-search-container
+        input.search-field(type='search' name='search' placeholder='Enter your product name...')
+        button.search-btn
+          ion-icon(name='search-outline')
+      .header-user-actions
+        button.action-btn
+          ion-icon(name='person-outline')
+        button.action-btn
+          ion-icon(name='heart-outline')
+          span.count 0
+        button.action-btn
+          ion-icon(name='bag-handle-outline')
+          span.count 0
+  nav.desktop-navigation-menu
+    .container
+      ul.desktop-menu-category-list
+        li.menu-category
+          a.menu-title(href='#') Home
+        li.menu-category
+          a.menu-title(href='#') Categories
+          .dropdown-panel
+            ul.dropdown-panel-list
+              li.menu-title
+                a(href='#') Electronics
+              li.panel-list-item
+                a(href='#') Desktop
+              li.panel-list-item
+                a(href='#') Laptop
+              li.panel-list-item
+                a(href='#') Camera
+              li.panel-list-item
+                a(href='#') Tablet
+              li.panel-list-item
+                a(href='#') Headphone
+              li.panel-list-item
+                a(href='#')
+                  img(src='./assets/images/electronics-banner-1.jpg' alt='headphone collection' width='250' height='119')
+            ul.dropdown-panel-list
+              li.menu-title
+                a(href='#') Men&apos;s
+              li.panel-list-item
+                a(href='#') Formal
+              li.panel-list-item
+                a(href='#') Casual
+              li.panel-list-item
+                a(href='#') Sports
+              li.panel-list-item
+                a(href='#') Jacket
+              li.panel-list-item
+                a(href='#') Sunglasses
+              li.panel-list-item
+                a(href='#')
+                  img(src='./assets/images/mens-banner.jpg' alt="men's fashion" width='250' height='119')
+            ul.dropdown-panel-list
+              li.menu-title
+                a(href='#') Women&apos;s
+              li.panel-list-item
+                a(href='#') Formal
+              li.panel-list-item
+                a(href='#') Casual
+              li.panel-list-item
+                a(href='#') Perfume
+              li.panel-list-item
+                a(href='#') Cosmetics
+              li.panel-list-item
+                a(href='#') Bags
+              li.panel-list-item
+                a(href='#')
+                  img(src='./assets/images/womens-banner.jpg' alt="women's fashion" width='250' height='119')
+            ul.dropdown-panel-list
+              li.menu-title
+                a(href='#') Electronics
+              li.panel-list-item
+                a(href='#') Smart Watch
+              li.panel-list-item
+                a(href='#') Smart TV
+              li.panel-list-item
+                a(href='#') Keyboard
+              li.panel-list-item
+                a(href='#') Mouse
+              li.panel-list-item
+                a(href='#') Microphone
+              li.panel-list-item
+                a(href='#')
+                  img(src='./assets/images/electronics-banner-2.jpg' alt='mouse collection' width='250' height='119')
+        li.menu-category
+          a.menu-title(href='#') Men&apos;s
+          ul.dropdown-list
+            li.dropdown-item
+              a(href='#') Shirt
+            li.dropdown-item
+              a(href='#') Shorts &amp; Jeans
+            li.dropdown-item
+              a(href='#') Safety Shoes
+            li.dropdown-item
+              a(href='#') Wallet
+        li.menu-category
+          a.menu-title(href='#') Women&apos;s
+          ul.dropdown-list
+            li.dropdown-item
+              a(href='#') Dress &amp; Frock
+            li.dropdown-item
+              a(href='#') Earrings
+            li.dropdown-item
+              a(href='#') Necklace
+            li.dropdown-item
+              a(href='#') Makeup Kit
+        li.menu-category
+          a.menu-title(href='#') Jewelry
+          ul.dropdown-list
+            li.dropdown-item
+              a(href='#') Earrings
+            li.dropdown-item
+              a(href='#') Couple Rings
+            li.dropdown-item
+              a(href='#') Necklace
+            li.dropdown-item
+              a(href='#') Bracelets
+        li.menu-category
+          a.menu-title(href='#') Perfume
+          ul.dropdown-list
+            li.dropdown-item
+              a(href='#') Clothes Perfume
+            li.dropdown-item
+              a(href='#') Deodorant
+            li.dropdown-item
+              a(href='#') Flower Fragrance
+            li.dropdown-item
+              a(href='#') Air Freshener
+        li.menu-category
+          a.menu-title(href='#') Blog
+        li.menu-category
+          a.menu-title(href='#') Hot Offers
+  .mobile-bottom-navigation
+    button.action-btn(data-mobile-menu-open-btn='')
+      ion-icon(name='menu-outline')
+    button.action-btn
+      ion-icon(name='bag-handle-outline')
+      span.count 0
+    button.action-btn
+      ion-icon(name='home-outline')
+    button.action-btn
+      ion-icon(name='heart-outline')
+      span.count 0
+    button.action-btn(data-mobile-menu-open-btn='')
+      ion-icon(name='grid-outline')
+  nav.mobile-navigation-menu.has-scrollbar(data-mobile-menu='')
+    .menu-top
+      h2.menu-title Menu
+      button.menu-close-btn(data-mobile-menu-close-btn='')
+        ion-icon(name='close-outline')
+    ul.mobile-menu-category-list
+      li.menu-category
+        a.menu-title(href='#') Home
+      li.menu-category
+        button.accordion-menu(data-accordion-btn='')
+          p.menu-title Men&apos;s
+          div
+            ion-icon.add-icon(name='add-outline')
+            ion-icon.remove-icon(name='remove-outline')
+        ul.submenu-category-list(data-accordion='')
+          li.submenu-category
+            a.submenu-title(href='#') Shirt
+          li.submenu-category
+            a.submenu-title(href='#') Shorts &amp; Jeans
+          li.submenu-category
+            a.submenu-title(href='#') Safety Shoes
+          li.submenu-category
+            a.submenu-title(href='#') Wallet
+      li.menu-category
+        button.accordion-menu(data-accordion-btn='')
+          p.menu-title Women&apos;s
+          div
+            ion-icon.add-icon(name='add-outline')
+            ion-icon.remove-icon(name='remove-outline')
+        ul.submenu-category-list(data-accordion='')
+          li.submenu-category
+            a.submenu-title(href='#') Dress &amp; Frock
+          li.submenu-category
+            a.submenu-title(href='#') Earrings
+          li.submenu-category
+            a.submenu-title(href='#') Necklace
+          li.submenu-category
+            a.submenu-title(href='#') Makeup Kit
+      li.menu-category
+        button.accordion-menu(data-accordion-btn='')
+          p.menu-title Jewelry
+          div
+            ion-icon.add-icon(name='add-outline')
+            ion-icon.remove-icon(name='remove-outline')
+        ul.submenu-category-list(data-accordion='')
+          li.submenu-category
+            a.submenu-title(href='#') Earrings
+          li.submenu-category
+            a.submenu-title(href='#') Couple Rings
+          li.submenu-category
+            a.submenu-title(href='#') Necklace
+          li.submenu-category
+            a.submenu-title(href='#') Bracelets
+      li.menu-category
+        button.accordion-menu(data-accordion-btn='')
+          p.menu-title Perfume
+          div
+            ion-icon.add-icon(name='add-outline')
+            ion-icon.remove-icon(name='remove-outline')
+        ul.submenu-category-list(data-accordion='')
+          li.submenu-category
+            a.submenu-title(href='#') Clothes Perfume
+          li.submenu-category
+            a.submenu-title(href='#') Deodorant
+          li.submenu-category
+            a.submenu-title(href='#') Flower Fragrance
+          li.submenu-category
+            a.submenu-title(href='#') Air Freshener
+      li.menu-category
+        a.menu-title(href='#') Blog
+      li.menu-category
+        a.menu-title(href='#') Hot Offers
+    .menu-bottom
+      ul.menu-category-list
+        li.menu-category
+          button.accordion-menu(data-accordion-btn='')
+            p.menu-title Language
+            ion-icon.caret-back(name='caret-back-outline')
+          ul.submenu-category-list(data-accordion='')
+            li.submenu-category
+              a.submenu-title(href='#') English
+            li.submenu-category
+              a.submenu-title(href='#') Espa&ntilde;ol
+            li.submenu-category
+              a.submenu-title(href='#') Fren&ccedil;h
+        li.menu-category
+          button.accordion-menu(data-accordion-btn='')
+            p.menu-title Currency
+            ion-icon.caret-back(name='caret-back-outline')
+          ul.submenu-category-list(data-accordion='')
+            li.submenu-category
+              a.submenu-title(href='#') USD &amp;dollar;
+            li.submenu-category
+              a.submenu-title(href='#') EUR &euro;
+      ul.menu-social-container
+        li
+          a.social-link(href='#')
+            ion-icon(name='logo-facebook')
+        li
+          a.social-link(href='#')
+            ion-icon(name='logo-twitter')
+        li
+          a.social-link(href='#')
+            ion-icon(name='logo-instagram')
+        li
+          a.social-link(href='#')
+            ion-icon(name='logo-linkedin')
