@@ -10,12 +10,13 @@ head
   link(rel='preconnect' href='https://fonts.googleapis.com')
   link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
   link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+  
 .overlay(data-overlay='')
 //
   - HEADER
 include _header
 
-block content
+include overview
 
 include _footer 
 
@@ -25,5 +26,5 @@ include _footer
 script(src='./assets/js/script.js')
 //
   - ionicon link
-script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
-script(nomodule='' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+script(src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js' type='module' )
+script(src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js' nomodule='')

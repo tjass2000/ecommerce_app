@@ -2,20 +2,18 @@ header
   .header-main
     .container
       a.header-logo(href='#')
-        img(src='./assets/images/logo/logo.svg' alt="Logo" width='120' height='36')
+        img(src='../public/icons/logo.svg' alt="Logo" width='120' height='50')
       .header-search-container
-        input.search-field(type='search' name='search' placeholder='Enter your product name...')
+        input.search-field(type='search' name='search' placeholder='Search for products, brands, and more...')
         button.search-btn
-          ion-icon(name='search-outline')
+          img(src='../public/icons/search-icon.svg' alt="search" width='35' height='25')
       .header-user-actions
         button.action-btn
-          ion-icon(name='person-outline')
+          img(src='../public/icons/profile-icon.svg' alt="profile" width='40' height='20')
         button.action-btn
-          ion-icon(name='heart-outline')
-          span.count 0
+          img(src='../public/icons/wishlist-icon.svg' alt="wishlist" width='40' height='26')
         button.action-btn
-          ion-icon(name='bag-handle-outline')
-          span.count 0
+          img(src='../public/icons/cart-icon.svg' alt="cart" width='40' height='26')
   nav.desktop-navigation-menu
     .container
       ul.desktop-menu-category-list
@@ -110,32 +108,6 @@ header
               a(href='#') Necklace
             li.dropdown-item
               a(href='#') Makeup Kit
-        li.menu-category
-          a.menu-title(href='#') Jewelry
-          ul.dropdown-list
-            li.dropdown-item
-              a(href='#') Earrings
-            li.dropdown-item
-              a(href='#') Couple Rings
-            li.dropdown-item
-              a(href='#') Necklace
-            li.dropdown-item
-              a(href='#') Bracelets
-        li.menu-category
-          a.menu-title(href='#') Perfume
-          ul.dropdown-list
-            li.dropdown-item
-              a(href='#') Clothes Perfume
-            li.dropdown-item
-              a(href='#') Deodorant
-            li.dropdown-item
-              a(href='#') Flower Fragrance
-            li.dropdown-item
-              a(href='#') Air Freshener
-        li.menu-category
-          a.menu-title(href='#') Blog
-        li.menu-category
-          a.menu-title(href='#') Hot Offers
   .mobile-bottom-navigation
     button.action-btn(data-mobile-menu-open-btn='')
       ion-icon(name='menu-outline')
@@ -189,21 +161,6 @@ header
             a.submenu-title(href='#') Makeup Kit
       li.menu-category
         button.accordion-menu(data-accordion-btn='')
-          p.menu-title Jewelry
-          div
-            ion-icon.add-icon(name='add-outline')
-            ion-icon.remove-icon(name='remove-outline')
-        ul.submenu-category-list(data-accordion='')
-          li.submenu-category
-            a.submenu-title(href='#') Earrings
-          li.submenu-category
-            a.submenu-title(href='#') Couple Rings
-          li.submenu-category
-            a.submenu-title(href='#') Necklace
-          li.submenu-category
-            a.submenu-title(href='#') Bracelets
-      li.menu-category
-        button.accordion-menu(data-accordion-btn='')
           p.menu-title Perfume
           div
             ion-icon.add-icon(name='add-outline')
@@ -217,42 +174,3 @@ header
             a.submenu-title(href='#') Flower Fragrance
           li.submenu-category
             a.submenu-title(href='#') Air Freshener
-      li.menu-category
-        a.menu-title(href='#') Blog
-      li.menu-category
-        a.menu-title(href='#') Hot Offers
-    .menu-bottom
-      ul.menu-category-list
-        li.menu-category
-          button.accordion-menu(data-accordion-btn='')
-            p.menu-title Language
-            ion-icon.caret-back(name='caret-back-outline')
-          ul.submenu-category-list(data-accordion='')
-            li.submenu-category
-              a.submenu-title(href='#') English
-            li.submenu-category
-              a.submenu-title(href='#') Espa&ntilde;ol
-            li.submenu-category
-              a.submenu-title(href='#') Fren&ccedil;h
-        li.menu-category
-          button.accordion-menu(data-accordion-btn='')
-            p.menu-title Currency
-            ion-icon.caret-back(name='caret-back-outline')
-          ul.submenu-category-list(data-accordion='')
-            li.submenu-category
-              a.submenu-title(href='#') USD &amp;dollar;
-            li.submenu-category
-              a.submenu-title(href='#') EUR &euro;
-      ul.menu-social-container
-        li
-          a.social-link(href='#')
-            ion-icon(name='logo-facebook')
-        li
-          a.social-link(href='#')
-            ion-icon(name='logo-twitter')
-        li
-          a.social-link(href='#')
-            ion-icon(name='logo-instagram')
-        li
-          a.social-link(href='#')
-            ion-icon(name='logo-linkedin')
