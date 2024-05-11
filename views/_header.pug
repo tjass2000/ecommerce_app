@@ -9,16 +9,19 @@ header
           img(src='../public/icons/search-icon.svg' alt="search" width='35' height='25')
       .header-user-actions
         button.action-btn
-          img(src='../public/icons/profile-icon.svg' alt="profile" width='40' height='20')
+          a(href="/myAccount") 
+            img(src='../public/icons/profile-icon.svg' alt="profile" width='40' height='20')
         button.action-btn
-          img(src='../public/icons/wishlist-icon.svg' alt="wishlist" width='40' height='26')
+          a(href="/myWishlist") 
+            img(src='../public/icons/wishlist-icon.svg' alt="wishlist" width='40' height='26')
         button.action-btn
-          img(src='../public/icons/cart-icon.svg' alt="cart" width='40' height='26')
+          a(href="/myCart") 
+            img(src='../public/icons/cart-icon.svg' alt="cart" width='40' height='26')
   nav.desktop-navigation-menu
     .container
       ul.desktop-menu-category-list
         li.menu-category
-          a.menu-title(href='#') Home
+          a.menu-title(href='/') Home
         li.menu-category
           a.menu-title(href='#') Categories
           .dropdown-panel

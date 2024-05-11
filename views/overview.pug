@@ -1,53 +1,56 @@
-main
-  //
-    - BANNER
-  .banner
-    .container
-      .slider-container.has-scrollbar
-        .slider-item
-          img.banner-img(src='../public/images/banner-1.jpg' alt="women's latest fashion sale")
-          .banner-content
-            p.banner-subtitle Trending item
-            h2.banner-title Women&apos;s latest fashion sale
-            p.banner-text
-              | elevate your look with our timeless fashion picks 
-            a.banner-btn(href='#') Shop now
-        .slider-item
-          img.banner-img(src='../public/images/banner-2.jpg' alt='modern sunglasses')
-          .banner-content
-            p.banner-subtitle Trending accessories
-            h2.banner-title Modern sunglasses
-            p.banner-text
-              | your one stop for sunglasses
-            a.banner-btn(href='#') Shop now
-        .slider-item
-          img.banner-img(src='../public/images/banner-3.jpg' alt='new fashion summer sale')
-          .banner-content
-            p.banner-subtitle Sale Offer
-            h2.banner-title New fashion summer sale
-            p.banner-text
-              | grab it before its gone
-            a.banner-btn(href='#') Shop now
+extends base.pug
 
-      .product-main
-        h2.title New Products
-        .product-grid
-          each product in productData
-            .showcase
-              .showcase-banner
-                img.product-img.default(src='../public/images/products/jacket-1.jpg' alt=`${product.product_name}` width='300')
-                img.product-img.hover(src='../public/images/products/jacket-1.jpg' alt='Mens Winter Leathers Jackets' width='300')
-                .showcase-actions
-                  button.btn-action
-                    img(src='../public/icons/wishlist-icon.svg' alt="wishlist" width='20' height='20')
-                  button.btn-action
-                    img(src='../public/icons/cart-icon.svg' alt="cart" width='20' height='20')
-              .showcase-content
-                .showcase-category
-                  a(href="#") #{product.category}
-                  a(href="#")
-                    .showcase-title
-                      h3 #{product.product_name}
-                  .price-box
-                    .price
-                      p ₹#{product.price}
+block content
+  main
+    //
+      - BANNER
+    .banner
+      .container
+        .slider-container.has-scrollbar
+          .slider-item
+            img.banner-img(src='../public/images/banner-1.jpg' alt="women's latest fashion sale")
+            .banner-content
+              p.banner-subtitle Trending item
+              h2.banner-title Women&apos;s latest fashion sale
+              p.banner-text
+                | elevate your look with our timeless fashion picks 
+              a.banner-btn(href='#') Shop now
+          .slider-item
+            img.banner-img(src='../public/images/banner-2.jpg' alt='modern sunglasses')
+            .banner-content
+              p.banner-subtitle Trending accessories
+              h2.banner-title Modern sunglasses
+              p.banner-text
+                | your one stop for sunglasses
+              a.banner-btn(href='#') Shop now
+          .slider-item
+            img.banner-img(src='../public/images/banner-3.jpg' alt='new fashion summer sale')
+            .banner-content
+              p.banner-subtitle Sale Offer
+              h2.banner-title New fashion summer sale
+              p.banner-text
+                | grab it before its gone
+              a.banner-btn(href='#') Shop now
+
+        .product-main
+          h2.title New Products
+          .product-grid
+            each product in productData
+              .showcase
+                .showcase-banner
+                  img.product-img.default(src='../public/images/products/jacket-1.jpg' alt=`${product.product_name}` width='300')
+                  img.product-img.hover(src='../public/images/products/jacket-1.jpg' alt='Mens Winter Leathers Jackets' width='300')
+                  .showcase-actions
+                    button.btn-action
+                      img(src='../public/icons/wishlist-icon.svg' alt="wishlist" width='20' height='20')
+                    button.btn-action
+                      img(src='../public/icons/cart-icon.svg' alt="cart" width='20' height='20')
+                .showcase-content
+                  .showcase-category
+                    a(href="#") #{product.category}
+                    a(href="#")
+                      .showcase-title
+                        h3 #{product.product_name}
+                    .price-box
+                      .price
+                        p ₹#{product.price}

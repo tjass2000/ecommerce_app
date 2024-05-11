@@ -1,0 +1,16 @@
+extends base
+
+
+block content
+    div
+        h2 CREATE YOUR ACCOUNT!
+        form
+            label(for='name') Your name
+            input#name(type='text', placeholder='Enter your name...', required)
+            label(for='email') Email address
+            input#email(type='email', placeholder='you@example.com', required)
+            label(for='password') Password
+            input#password(type='password', placeholder='••••••••', required, minlength='8')
+            label(for='passwordConfirm') Confirm password
+            input#passwordConfirm(type='password', placeholder='••••••••', required, minlength='8')
+            button(type="submit") SIGN UP

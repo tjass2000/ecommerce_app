@@ -12,6 +12,8 @@ const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
 const viewRouter = require("./routes/viewRoutes");
 
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/public", express.static(process.cwd() + "/public"));
 
 app.set("view engine", "pug");
